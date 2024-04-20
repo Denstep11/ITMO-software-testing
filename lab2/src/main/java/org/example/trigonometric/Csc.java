@@ -23,7 +23,7 @@ public class Csc {
         if (Double.POSITIVE_INFINITY == x || Double.NEGATIVE_INFINITY == x) {
             return Double.NaN;
         }
-        if(sin.result(x,eps)==0){
+        if(sin.result(x,eps)==0.0){
             return Double.NaN;
             //k*pi
         }
