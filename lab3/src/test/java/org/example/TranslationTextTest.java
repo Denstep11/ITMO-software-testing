@@ -7,6 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.time.Duration;
 
@@ -18,7 +19,7 @@ public class TranslationTextTest {
 
     @BeforeEach
     public void setup() {
-        driver = new ChromeDriver();
+        driver = new FirefoxDriver();
         driver.get("https://translate.google.ru/");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
     }

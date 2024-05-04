@@ -8,6 +8,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.time.Duration;
 
@@ -18,7 +19,7 @@ public class AuthorizationTest {
 
     @BeforeEach
     public void setup() {
-        driver = new ChromeDriver();
+        driver = new FirefoxDriver();
         driver.get("https://translate.google.ru/");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
     }
@@ -29,7 +30,7 @@ public class AuthorizationTest {
     }
 
     @Test
-    public void translationTextRuToEng1() throws InterruptedException {
+    public void authorisation() throws InterruptedException {
         driver.findElement(By.xpath("//*[@id=\"gb\"]/div[2]/div[3]/div[1]/a"))
                 .click();
         Thread.sleep(2000);

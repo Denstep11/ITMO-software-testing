@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.time.Duration;
 
@@ -17,7 +18,7 @@ public class RulesAndInfoTest {
 
     @BeforeEach
     public void setup() {
-        driver = new ChromeDriver();
+        driver = new FirefoxDriver();
         driver.get("https://translate.google.ru/");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
     }
@@ -28,7 +29,7 @@ public class RulesAndInfoTest {
     }
 
     @Test
-    public void translationTextRuToEng1() throws InterruptedException {
+    public void getRules() throws InterruptedException {
         driver.findElement(By.xpath("//*[@id=\"gb\"]/div[2]/div[1]/div[1]"))
                 .click();
         Thread.sleep(2000);
